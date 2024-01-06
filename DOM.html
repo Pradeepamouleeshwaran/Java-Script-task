@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<style>
+    .parent{
+        border: 2px solid cornflowerblue;
+        padding: 10px;
+        background-color: brown;
+    }
+    .child{
+        border: 2px solid red;
+        margin: 5px;
+        padding: 5px;
+        background-color: cadetblue;
+    }
+    .original{
+        color:darkgoldenrod;
+    }
+    .cloned{
+        color:indianred;
+    }
+</style>
+
+<body>
+    <p class="highlight new">This is a Highlighted Paragraph.</p>
+
+    <p>This is Normal Paragraph.</p>
+
+    <h1 class="highlight" id="h1">h1 1st Tag</h1>
+
+    <div class="highlight new">This is a Highlighted div.</div>
+
+    <p class="highlight new">Another Highlighted Paragraph.</p>
+
+    <div>
+        <h1> h1 2nd Tag</h1>
+    </div>
+
+    <p id="username"></p>
+
+    <ol class="ol">
+        <li>Scooty</li>
+        <li>Yamaha</li>
+        <li>Hero</li>
+        <li>Hundai</li>
+        <li>Pulsar</li>
+    </ol>
+
+
+    <div class="parent">
+        <div class="child">Child Element</div>
+    </div>
+
+    <div class="original">Original Element
+        <p>Hello I am Child</p>
+        <ol>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+        </ol>
+    </div>
+    <script src="script.js">
+    //select the child element
+    let childElement = document.querySelector('.child');
+    let parentDiv =document.querySelector('.parent');
+
+    console.log(childElement.parentElement);
+    console.log(parentDiv.childNodes);
+
+    // Select the Original Element
+    let originalElement = document.querySelector('.original');
+
+    // clone the element and modify the clone
+    let clonedElement = originalElement.cloneNode(true);
+    clonedElement.textContent +="New Content";
+    clonedElement.classList.add('cloned');
+
+    // Append the cloned element to the body
+    document.body.append(clonedElement);
+    </script>
+</body>
+
+</html>
