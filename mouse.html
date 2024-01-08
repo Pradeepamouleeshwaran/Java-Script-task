@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        background-color: aquamarine;
+        width:200px;
+        height: 200px;
+        font-weight: bolder;
+        font-size: x-large;
+        text-align: center;
+    }
+</style>
+<body>
+    <p id='click'>CLICK</p>
+    <p id='dblclick'>DoubleClick</p>
+    <p id='mousedown'>MouseDown</p>
+    <p id='mouseup'>MouseUp</p>
+    <p id='mousemove'>MouseMove</p>
+    <p id='mouseenter'>MouseEnter</p>
+    <p id='mouseleave'>MouseLeave</p>
+
+    <script>
+        // click
+        var click = document.getElementById('click')
+        click.addEventListener('click' , function () {
+            console.log('click event triggered.');
+        });
+
+        // double click
+        var dblclick = document.getElementById('dblclick')
+        dblclick.addEventListener('dblclick' , function () {
+            console.log('dblclick event triggered.');
+        });
+
+        // Mouse down
+        var mousedown = document.getElementById('mousedown')
+        mousedown.addEventListener('mousedown' , function () {
+            console.log('mousedown event triggered.');
+        });
+
+         // Mouse Up
+         var mouseup = document.getElementById('mouseup')
+        mouseup.addEventListener('mouseup' , function () {
+            console.log('mouseup event triggered.');
+        });
+
+         // Mouse Move
+         var mousemove = document.getElementById('mousemove')
+        mousemove.addEventListener('mousemove' , function () {
+            console.log('mousemove event triggered.');
+        });
+
+         // Mouse Enter
+         var mouseenter = document.getElementById('mouseenter')
+        mouseenter.addEventListener('mouseenter' , function () {
+            console.log('mouseenter event triggered.');
+        });
+
+         // Mouse leave
+         var mouseleave = document.getElementById('mouseleave')
+        mouseleave.addEventListener('mouseleave' , function () {
+            console.log('mouseleave event triggered.');
+        });
+    </script>
+</body>
+</html>
