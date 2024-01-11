@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sentence ="Moulee"
+        let a = /e/g // regular expression syntax // global search
+        console.log(sentence.match(a));
+        console.log(a.test(sentence));
+        console.log(sentence.search(a));
+
+        let caps = /k/gi // ignore case sensitive
+        let magic = 'Welcome To Kirikalan Show'
+        console.log(magic.search(caps));
+
+        let hp = 'top most\npowerful system' 
+        console.log(hp);
+
+        let more = /m/mgi;
+
+        // bracket
+        let alpha = 'abcdefghijklmnopqrstuvwxyz';
+        let vowels = /[^aeiou]/g ;
+        console.log(alpha.match(vowels));
+
+        let new1 = 'this is  # a paragraph  $ with space 34';
+        let onlyspace =/spaces\b/g;
+        console.log(new1);
+        // console.log(new1.match(onlyspace));
+        console.log(onlyspace.test(new1));
+
+        let name='1Pradee'
+        let check = /^[A-Z]/
+        console.log(check.test(name));
+
+        let mail = '.com'
+        let checks =/(.com)$/
+        console.log(checks.test(mail));
+
+        let star = 'his name is moulee his mission is on i s'
+
+        let is =/i+s?/g;
+        console.log(star.match(is));
+
+        let amount = '1 10 222 3333 44444';
+        let number =/\d{1,4}/g
+        console.log(amount.match(number));
+
+        let gmail = 'MPabcde314@gmail.com'
+        let checkmail =/^[A-Z]{2}[a-z0-9]{5,10}[@](gmail|email)\.(com)$/
+        console.log(checkmail.test(gmail));
+
+    </script>
+</body>
+</html>
